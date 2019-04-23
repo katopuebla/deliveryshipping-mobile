@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Entrega
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset>
+    <!-- <ion-list-header>Follow us on Twitter</ion-list-header> -->
+    <form #receive="ngForm" (ngSubmit)="saveReceive(receive.value)" >
+    <ion-item>
+      <ion-label>guía:</ion-label>
+      <ion-select name="guia" [(ngModel)]="guia" (ngModelChange)="selected($event)">
+      <ion-option ngValue="envio" *ngFor="let envio of envios">{{envio.guia}}</ion-option>
+    </ion-select>
+    </ion-item>
+    <ion-item>
+      
+    </ion-item>
+    <ion-item>
+      <ion-label>Consignatario:</ion-label>
+      <ion-input name="nombre" [(ngModel)]="nombre" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dirección:</ion-label>
+      <ion-input name="direccion" [(ngModel)]="direccion" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Persona que recibe:</ion-label>
+      <ion-input name="recibe" [(ngModel)]="recibe"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>No. Identificacion:</ion-label>
+      <ion-input type="number" name="identificacion" [(ngModel)]="identificacion" placeholder="Ine, Ife, No. Pasaporte,.."></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button >Entrega</button>
+    </ion-item>
+    </form>
+      <!-- <button ion-button (click)="scan()">Scan</button> -->
+  </ion-list>
+</ion-content>
