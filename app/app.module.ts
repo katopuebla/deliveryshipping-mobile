@@ -46,7 +46,6 @@ import {BarcodeScanner} from '@ionic-native/barcode-scanner';
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler}
     , EnviosService
-    , BarcodeScanner
   ]
 })
 export class AppModule {}

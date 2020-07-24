@@ -24,7 +24,6 @@ export class EntregaComponent implements OnInit {
     // public modalCtrl: ModalController,
     private service: EnviosService
     , private alertCtrl: AlertController
-    , private barcodeScanner: BarcodeScanner
     ) { }
 
   ngOnInit() {
